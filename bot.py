@@ -18,7 +18,7 @@ try:
         print("API ключи загружены!")
 except FileNotFoundError:
     print("apikeys.json не найден!")
-    exit()
+    stop_polling()
 
 def get_api_key(user_id):
     return user_api_keys.get(str(user_id), None)
